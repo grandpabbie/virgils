@@ -1,0 +1,22 @@
+{
+    "name": "Virgils",
+    "version": "0.0.50",
+    "description": "Numerical conversions to convert numbers larger than 50, into Virgils.",
+    "manifest_version": 2,
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "css": ["css/content.css"],
+        "js": ["content.js"]
+    }],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    }
+  }
